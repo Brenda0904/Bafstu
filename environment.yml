@@ -1,0 +1,14 @@
+name: variant-filtering
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+  - r
+dependencies:
+  - biopet-extractadaptersfastqc==0.2
+  - biopet-sampleconfig==0.2
+  - perl-cgi==4.40
+  - numpy==1.15.4
+  - scipy==1.1.0
+  - pandas==0.23.4
+  - numba==0.41.0
