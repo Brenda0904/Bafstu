@@ -27,13 +27,13 @@ Protein Function Analysis
 Envision
 ====
 Need Uniprot ids
-=
+
 Look into the meaning of the score
-=
+
 See where the most recent protein function information is stored/ hoe it is updated.
-=
+
 ~0 (most damaging) to ~1 (most wild-type-like)
-=
+
 
 EVmutation
 ====
