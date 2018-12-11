@@ -15,5 +15,12 @@ workflow pipeline {
 			vcf_file = vcf
 			outputDir = outputDir
 	}
+	
+	call Chasm.buildclassifier as CHASM_bc {
+		input:
+			muttable = muttable
+			name = name
+			
 	output {
 	}
+}
