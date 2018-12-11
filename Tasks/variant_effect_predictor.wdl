@@ -1,20 +1,23 @@
-workflow variant_effect_predictor{
-	call vep
-}
+version 1.0
+
+import "common.wdl" as common
 
 task vep{
-	File script_vep
+    input {
 	File vcf_file
-	String outdirpath
-	command{
-		set -e -o pipefail
-		mkdir -p ~{outdirpath}
-		script_vep \ 
-		~{"-i" + vcf_file} \
-		~{"--cache"} \
-		~{"--output_file" + outfile} \ 
-		~{--plugin "CADD"}
-	}
+	String outputDir
+    }
+    command{
+        set -e -o pipefail
+	mkdir -p ~{outputDir}
+	vep \ 
+	~{"-i" + vcf_file} \
+	~{"--cache"} \
+	~{"--output_file" + outfile} \ 
+	~{--plugin "CADD"}
+    }
 
-	output{File outfile = outdirpath + "/" + vcf_file + ".vep.results.vcf"}
+    output{
+        File outfile = outputDir + "/" + vcf_file + ".vep.results.vcf"
+    }
 }
