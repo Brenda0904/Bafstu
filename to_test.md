@@ -3,6 +3,7 @@ VCF-Annotation
 CHASM
 ====
 Tested with the data supplied by the paper
+
 Need to create hg38 data
 
 FATHMM-XF
@@ -38,7 +39,9 @@ See where the most recent protein function information is stored/ hoe it is upda
 EVmutation
 ====
 Need Uniprot ids
+
 Look into the meaning of the score
+
 See where the most recent protein function information is stored/ hoe it is updated.
 
 Variant Filtering
