@@ -4,7 +4,9 @@ CHASM
 ====
 Tested with the data supplied by the paper
 
-Need to create hg38 data
+Need to create hg38 data.
+
+Needs a mysql database.
 
 FATHMM-XF
 ====
