@@ -1,3 +1,9 @@
+Variant Calling
+==
+DeepSVR
+====
+Installed --> Need to test
+
 VCF-Annotation
 ==
 CHASM
@@ -15,10 +21,6 @@ Installed --> Need to test
 DeepSEA
 ====
 Install this one
-
-DeepSVR
-====
-Installed --> Need to test
 
 CADD
 ====
