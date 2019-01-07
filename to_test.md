@@ -45,7 +45,7 @@ See where the most recent protein function information is stored/ how it is upda
 
 EVmutation --> Replaced with EVcouplings (python package)
 ====
-Installed --> Run it using HGO ids.
+Installed --> Run it using HPO ids.
 
 Look into the meaning of the score
 
