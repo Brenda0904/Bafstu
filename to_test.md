@@ -2,7 +2,7 @@ Variant Calling
 ==
 DeepSVR
 ====
-Installed --> Need to test
+Installed --> 
 
 VCF-Annotation
 ==
@@ -35,7 +35,7 @@ Need Uniprot ids
 
 Look into the meaning of the score
 
-See where the most recent protein function information is stored/ hoe it is updated.
+See where the most recent protein function information is stored/ how it is updated. --> Uniprot
 
 ~0 (most damaging) to ~1 (most wild-type-like)
 
@@ -46,7 +46,7 @@ Need Uniprot ids
 
 Look into the meaning of the score
 
-See where the most recent protein function information is stored/ hoe it is updated.
+See where the most recent protein function information is stored/ how it is updated.
 
 Variant Filtering
 ==
