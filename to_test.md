@@ -2,13 +2,13 @@ Variant Calling
 ==
 DeepSVR
 ====
+
 Installed --> 
 
 VCF-Annotation
 ==
 CHASM
 ====
-Tested with the data supplied by the paper
 
 Need to create hg38 data.
 
@@ -20,10 +20,12 @@ Installed --> Need to test
 
 DeepSEA
 ====
+
 Install this one
 
 CADD
 ====
+
 Tested --> functional
 
 Protein Function Analysis
@@ -31,7 +33,8 @@ Protein Function Analysis
 
 Envision
 ====
-Need Uniprot ids
+
+Need Uniprot ids --> lot of the uniprot ids not in the tool.
 
 Look into the meaning of the score
 
@@ -40,21 +43,23 @@ See where the most recent protein function information is stored/ how it is upda
 ~0 (most damaging) to ~1 (most wild-type-like)
 
 
-EVmutation
+EVmutation --> Replaced with EVcouplings (python package)
 ====
-Need Uniprot ids
+Installed
 
 Look into the meaning of the score
 
-See where the most recent protein function information is stored/ how it is updated.
+See where the most recent protein function information is stored/ how it is updated. --> Uniprot
 
 Variant Filtering
 ==
 
-Genomiser
+Exomiser
 ====
-Need to test
+
+Installed --> works on data supplied by paper
 
 SomaticSeq
 ====
+
 Maybe look into it later, because it is for somatic variants and is a merging tool
