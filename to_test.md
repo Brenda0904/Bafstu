@@ -65,7 +65,10 @@ Installed --> works on data supplied by paper
 Installed --> Run it using HPO ids.
 
 Check whether to run it online or offline.
+Online --> have to set a maximum of variants to analyse.
 What information is stored to match the HPO ids to the genes.
+
+Running on raw vcf
 
 SomaticSeq
 ====
