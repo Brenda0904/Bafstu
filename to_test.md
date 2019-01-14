@@ -3,7 +3,7 @@ Variant Calling
 DeepSVR
 ====
 
-Installed --> Fix some errors
+Installed --> Need BAM files
 
 VCF-Annotation
 ==
@@ -68,7 +68,8 @@ Check whether to run it online or offline.
 Online --> have to set a maximum of variants to analyse.
 What information is stored to match the HPO ids to the genes.
 
-Running on raw vcf
+PED file has to contain only one family --> plink or vcftools
+
 
 SomaticSeq
 ====
