@@ -19,11 +19,11 @@ Look into the paper more to decide if it is worth the difficulty of installation
 FATHMM-XF
 ====
 Installed --> Need to test
+Apparently can only handle single base substitutions
 
 DeepSEA
 ====
-
-Install this one
+Installed --> Need torch installed --> Email Michel
 
 CADD
 ====
@@ -36,7 +36,7 @@ Protein Function Analysis
 Envision
 ====
 
-Need Uniprot ids --> lot of the uniprot ids not in the tool.
+Need Uniprot ids
 
 Look into the meaning of the score
 
@@ -46,6 +46,7 @@ See where the most recent protein function information is stored/ how it is upda
 
 Look into the calculation of new scores.
 Check the difference of the list w/ swissprot ids and the output vcf.
+
 
 
 EVmutation --> Replaced with EVcouplings (python package)
