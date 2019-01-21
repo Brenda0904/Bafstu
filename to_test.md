@@ -52,7 +52,7 @@ Check the difference of the list w/ swissprot ids and the output vcf.
 EVmutation --> Replaced with EVcouplings (python package)
 ====
 
-Look into the meaning of the score
+Scores variants on the evolutionary constraint.
 
 See where the most recent protein function information is stored/ how it is updated. --> Uniprot
 
@@ -69,7 +69,7 @@ Check whether to run it online or offline.
 Online --> have to set a maximum of variants to analyse.
 What information is stored to match the HPO ids to the genes.
 
-PED file has to contain only one family --> plink or vcftools
+ped file not correct --> On hold
 
 
 SomaticSeq
