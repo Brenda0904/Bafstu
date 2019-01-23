@@ -19,6 +19,7 @@ Look into the paper more to decide if it is worth the difficulty of installation
 FATHMM-XF
 ====
 Installed --> Need to test
+
 Apparently can only handle single base substitutions
 
 # Chromosome    Position        Reference       Mutant  Coding  Noncoding       Prediction      Confidence
@@ -37,6 +38,10 @@ CADD
 ====
 
 Tested --> functional
+
+ExPecto
+===
+Installed, need to test
 
 Protein Function Analysis
 ==
