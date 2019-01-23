@@ -21,6 +21,14 @@ FATHMM-XF
 Installed --> Need to test
 Apparently can only handle single base substitutions
 
+# Chromosome    Position        Reference       Mutant  Coding  Noncoding       Prediction      Confidence
+Traceback (most recent call last):
+  File "/exports/sascstudent/brenda/fathmm/fathmm_xf_query.py", line 263, in <module>
+    predList = getPrediction(data, query, predType)
+  File "/exports/sascstudent/brenda/fathmm/fathmm_xf_query.py", line 125, in getPrediction
+    for record in recordList.split("\n"):
+TypeError: a bytes-like object is required, not 'str'
+
 DeepSEA
 ====
 Installed --> Need torch installed --> Email Michel
@@ -69,7 +77,7 @@ Check whether to run it online or offline.
 Online --> have to set a maximum of variants to analyse.
 What information is stored to match the HPO ids to the genes.
 
-ped file not correct --> On hold
+Need to run it per family -> Ped file for each family
 
 
 SomaticSeq
