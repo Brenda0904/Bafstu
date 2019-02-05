@@ -15,20 +15,13 @@ Need to create hg38 data.
 Needs a mysql database.
 
 Look into the paper more to decide if it is worth the difficulty of installation.
+Because it is too difficult and too low citations, we will not look into this anymore
 
 FATHMM-XF
 ====
 Installed --> Need to test
 
-Apparently can only handle single base substitutions
-
-# Chromosome    Position        Reference       Mutant  Coding  Noncoding       Prediction      Confidence
-Traceback (most recent call last):
-  File "/exports/sascstudent/brenda/fathmm/fathmm_xf_query.py", line 263, in <module>
-    predList = getPrediction(data, query, predType)
-  File "/exports/sascstudent/brenda/fathmm/fathmm_xf_query.py", line 125, in getPrediction
-    for record in recordList.split("\n"):
-TypeError: a bytes-like object is required, not 'str'
+Protein input format created.
 
 DeepSEA
 ====
