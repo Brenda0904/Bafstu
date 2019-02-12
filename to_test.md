@@ -14,23 +14,22 @@ Need to create hg38 data.
 
 Needs a mysql database.
 
-Look into the paper more to decide if it is worth the difficulty of installation.
 Because it is too difficult and too low citations, we will not look into this anymore
 
 FATHMM-XF
 ====
-Installed --> Need to test
-
-Protein input format created.
+Installed 
+Running on single nucleotide variants.
 
 DeepSEA
 ====
-Installed --> Need torch installed --> Email Michel
+Installed --> torch installed, test further.
 
 CADD
 ====
 
 Tested --> functional
+When running in WDL script the cache is not recognised.
 
 ExPecto
 ===
@@ -44,14 +43,11 @@ Envision
 
 Need Uniprot ids
 
-Look into the meaning of the score
-
 See where the most recent protein function information is stored/ how it is updated. --> Uniprot
 
 ~0 (most damaging) to ~1 (most wild-type-like)
 
-Look into the calculation of new scores.
-Check the difference of the list w/ swissprot ids and the output vcf.
+Got a list from the FATHMM script, test now.
 
 
 
