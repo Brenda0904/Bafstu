@@ -1,23 +1,19 @@
 version 1.0
 
-import "common.wdl" as common
-
-task vep{
+task vep {
     input {
-	File vcf_file
-	String outputDir
+        File vcf_file
+        String outputDir
+        String vep_location
+        String cache_dir
     }
     command{
         set -e -o pipefail
-	mkdir -p ~{outputDir}
-	vep \ 
-	~{"-i" + vcf_file} \
-	~{"--cache"} \
-	~{"--output_file" + outfile} \ 
-	~{--plugin "CADD"}
+        mkdir -p ~{outputDir}
+        /exports/sascstudent/brenda/ensembl-vep/vep ~{"-i " + vcf_file} ~{"--cache " + cache_dir} ~{"--plugin CADD"} ~{"--uniprot"} ~{"--protein"}
     }
-
     output{
-        File outfile = outputDir + "/" + vcf_file + ".vep.results.vcf"
+        File outfile = outputDir + "/vep_vcf.vcf"
     }
 }
+
