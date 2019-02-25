@@ -1,6 +1,7 @@
 version 1.0
 
 import "Tasks/variant_effect_predictor.wdl" as Vep
+import "Tasks/exomiser.wdl" as Exomiser
 #import "tasks/common.wdl" as common
 #import "tasks/biopet/biopet.wdl" as biopet
 #import "tasks/biopet/sampleconfig.wdl" as sampleconfig
@@ -19,6 +20,9 @@ workflow variant_pipeline {
             vep_location = vep_location,
             cache_dir = cache_dir
     }
+    call Exomiser.exomiser as exomiser_task{
+        input:
+            
     output {
         File outfile = outputDirfile
     }
