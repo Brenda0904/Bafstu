@@ -12,18 +12,28 @@ workflow variant_pipeline {
         String outputDir
         String vep_location
         String cache_dir
+        String exomiser_jar
+        String HPO_ids
+        File ped_file
     }
-    String outputDirfile = outputDir + "/vep_output.vcf"
+    String outputDirfile = outputDir + "/vep_vcf.vcf"
     call vep.vep as vep_task {
         input:
             vcf_file = vcf_file,
             vep_location = vep_location,
             cache_dir = cache_dir
     }
-    call Exomiser.exomiser as exomiser_task{
-        input:
-            
     output {
         File outfile = outputDirfile
     }
+    call Exomiser.exomiser as exomiser_task{
+        input:
+            File vcf_file
+            String outputDir
+            String exomiser_jar
+            String HPO_ids
+            File ped_file
+    }
+    output {
+        File outfile = outputDir + "/exomiser_vcf.vcf"
 }
