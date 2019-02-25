@@ -5,22 +5,21 @@ import "Tasks/variant_effect_predictor.wdl" as Vep
 #import "tasks/biopet/biopet.wdl" as biopet
 #import "tasks/biopet/sampleconfig.wdl" as sampleconfig
 
-workflow pipeline {
-	input {
-    	File vcf
-		String outputDir
-	}
-	call Vep.vep as VEP {
-		input:
-			vcf_file = vcf
-			outputDir = outputDir
-	}
-	
-	call Chasm.buildclassifier as CHASM_bc {
-		input:
-			muttable = muttable
-			name = name
-			
-	output {
-	}
+workflow variant_pipeline {
+    input{
+        File vcf_file
+        String outputDir
+        String vep_location
+        String cache_dir
+    }
+    String outputDirfile = outputDir + "/vep_output.vcf"
+    call vep.vep as vep_task {
+        input:
+            vcf_file = vcf_file,
+            vep_location = vep_location,
+            cache_dir = cache_dir
+    }
+    output {
+        File outfile = outputDirfile
+    }
 }
