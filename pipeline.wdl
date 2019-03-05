@@ -1,6 +1,7 @@
 version 1.0
 
 import "Tasks/variant_effect_predictor.wdl" as Vep
+import "Tasks/envision.wdl" as Envision
 import "Tasks/exomiser.wdl" as Exomiser
 #import "tasks/common.wdl" as common
 #import "tasks/biopet/biopet.wdl" as biopet
