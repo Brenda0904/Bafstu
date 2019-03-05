@@ -15,6 +15,7 @@ workflow variant_pipeline {
         String exomiser_jar
         String HPO_ids
         File ped_file
+        String envision_scores
     }
     String outputDirfile = outputDir + "/vep_vcf.vcf"
     call vep.vep as vep_task {
@@ -26,6 +27,16 @@ workflow variant_pipeline {
     output {
         File outfile = outputDirfile
     }
+    String envisionDirfile = outputDir + "/envision_vcf.vcf"
+    call Envision.envision as envision_task{
+        input:
+            File vcf_file
+            String outputDir
+            String envision_scores
+    }
+    output {
+        File outfile = envisionDirfile
+            
     call Exomiser.exomiser as exomiser_task{
         input:
             File vcf_file
