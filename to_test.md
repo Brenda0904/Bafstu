@@ -20,6 +20,7 @@ FATHMM-XF
 ====
 Installed 
 Running on single nucleotide variants.
+Runtime was very long, stopped it when it reached a week and a half
 
 DeepSEA
 ====
@@ -29,11 +30,11 @@ CADD
 ====
 
 Tested --> functional
-When running in WDL script the cache is not recognised.
 
 ExPecto
 ===
-Installed, need to test
+Installed
+Memory error.
 
 Protein Function Analysis
 ==
@@ -47,7 +48,7 @@ See where the most recent protein function information is stored/ how it is upda
 
 ~0 (most damaging) to ~1 (most wild-type-like)
 
-Got a list from the FATHMM script, test now.
+Scores are obtained, have to see what to do with variants with multiple scores and merge the scores with the vcf file.
 
 
 
@@ -72,6 +73,7 @@ Online --> have to set a maximum of variants to analyse.
 What information is stored to match the HPO ids to the genes.
 
 Need to run it per family -> Ped file for each family
+To get the correct output format, a new version had to be installed, still downloading the last pieces of data.
 
 
 SomaticSeq
