@@ -22,6 +22,8 @@ Installed
 Running on single nucleotide variants.
 Runtime was very long, stopped it when it reached a week and a half, maybe use this after filtering using the other tools
 
+1,5 weeks for 2.5 million/10 million queries.
+
 DeepSEA
 ====
 Installed --> Vcf format error, trying to convert small portion of vcf to version 4.1 or 4.0 and check if that works
@@ -46,6 +48,8 @@ Envision
 
 Vcf file with scores is created and can be merged with the other vcfs --> functional
 
+Try to find a different way to annotate the vcf with the scores.
+
 
 
 EVmutation --> Replaced with EVcouplings (python package)
@@ -54,6 +58,8 @@ EVmutation --> Replaced with EVcouplings (python package)
 Scores variants on the evolutionary constraint.
 
 See where the most recent protein function information is stored/ how it is updated. --> Uniprot
+
+Check whether the tool needs a connection to uniprot at the moment it is running
 
 
 
