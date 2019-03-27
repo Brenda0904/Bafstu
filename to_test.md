@@ -34,7 +34,7 @@ Tested --> functional
 ExPecto
 ===
 Installed
-Memory error.
+Currently running
 
 Protein Function Analysis
 ==
@@ -71,7 +71,7 @@ Online --> have to set a maximum of variants to analyse.
 What information is stored to match the HPO ids to the genes.
 
 Need to run it per family -> Ped file for each family
-New version is installed, 
+New version is installed, all the files have to be set right in the properties file
 
 
 SomaticSeq
