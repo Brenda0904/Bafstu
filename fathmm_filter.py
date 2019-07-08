@@ -27,21 +27,25 @@ for variant in my_parser:
             line = fathmm_file[x].strip('\n')
             line = line.split(' ')
             if ("chr"+line[chrom]) == chrom_var and line[ref] == ref_var and line[alt] == alt_var and line[pos] == pos[var]:
-                fathmm_score = line[score]
-                info['fathmm'] = fathmm_score
-                variants.append(variant)
-                break
+                if line[score] == 'None':
+                    info['fathmm'] = 'None'
+                    variants.append(variant)
+                    break
+                elif line[score] != 'None':
+                    fathmm_score = line[score]
+                    info['fathmm'] = fathmm_score
+                    variants.append(variant)
+                    break        
         except:
             pass
-    if variant not in variants:
-        info['fathmm'] = ''
-        variants.append(variant)
+
 outfile = open(sys.argv[3], "w")
 for line in my_parser.metadata.print_header():
     outfile.write(line + '\n')
 for variant in variants:
-    if len(variant['info_dict']['fathmm']) == 0:
+    if variant['info_dict']['fathmm'] == 'None' :
         outfile.write('\t'.join([variant[head] for head in my_parser.header])+ "\n")
-        print("pass")
-    elif float(variant['info_dict']['fathmm']) > 0.5:
+    elif variant['info_dict']['fathmm'] == 'pathogenic':
         outfile.write('\t'.join([variant[head] for head in my_parser.header])+ "\n")
+outfile.close()
+
