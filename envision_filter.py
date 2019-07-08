@@ -1,3 +1,6 @@
+from vcf_parser import VCFParser
+import sys
+
 my_parser = VCFParser(infile=sys.argv[1], split_variants=True, check_info=True)
 infile = open(sys.argv[2])
 envision_file = infile.readlines()
