@@ -1,0 +1,56 @@
+## Exomiser Analysis Template.
+---
+analysis:
+    genomeAssembly: hg38
+    vcf: /exports/sascstudent/brenda/exomiser-cli-11.0.0/family_700014.vcf
+    ped: /exports/sascstudent/brenda/exomiser-cli-11.0.0/family_700014.ped
+    proband: '700014000002'
+    hpoIds : ['HP:0000958','HP:0001480','HP:0001595','HP:0003764','HP:0100013','HP:0002861','HP:0006753','HP:0002894','HP:0000488','HP:0100763','HP:0002071']
+    inheritanceModes: {}
+    analysisMode: PASS_ONLY
+    frequencySources: [
+        THOUSAND_GENOMES,
+        TOPMED,
+        UK10K,
+        ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL,
+
+        EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN,
+        EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN,
+        EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN,
+        EXAC_OTHER,
+
+        GNOMAD_E_AFR,
+        GNOMAD_E_AMR,
+        GNOMAD_E_EAS,
+        GNOMAD_E_FIN,
+        GNOMAD_E_NFE,
+        GNOMAD_E_OTH,
+        GNOMAD_E_SAS,
+
+        GNOMAD_G_AFR,
+        GNOMAD_G_AMR,
+        GNOMAD_G_EAS,
+        GNOMAD_G_FIN,
+        GNOMAD_G_NFE,
+        GNOMAD_G_OTH,
+        GNOMAD_G_SAS
+    ]
+    pathogenicitySources: [POLYPHEN, MUTATION_TASTER, SIFT, REMM]
+    steps: [
+        variantEffectFilter: {
+            remove: [
+                INTERGENIC_VARIANT,
+                CODING_TRANSCRIPT_INTRON_VARIANT,
+                NON_CODING_TRANSCRIPT_INTRON_VARIANT,
+                ]
+        },
+        frequencyFilter: {maxFrequency: 1.0},
+        pathogenicityFilter: {keepNonPathogenic: false},
+        inheritanceFilter: {},
+        omimPrioritiser: {},
+    ]
+outputOptions:
+    outputContributingVariantsOnly: true
+    numGenes: 0
+    outputPrefix: results/700014
+    outputFormats: [VCF]
