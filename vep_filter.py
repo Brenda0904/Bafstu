@@ -10,7 +10,6 @@ for variant in my_parser:
         sift = info['SIFT']
         polyphen = info['PolyPhen']
         cadd = info['CADD_PHRED']
-        print(float(sift), float(polyphen), float(cadd))
         if len(cadd) != 0 or len(sift) != 0 or len(polyphen) !=0:
             if len(cadd) == 0:
                 cadd = 100
@@ -20,9 +19,8 @@ for variant in my_parser:
                 polyphen = 1
             if float(sift) < 0.05 and float(polyphen) > 0.446 and float(cadd) > 15:
                 remaining.append(variant)
-                print('passed')
-            else:
-                print('failed')
+        if len(cadd) == 0 and len(sift) == 0 and len(polyphen) == 0 and variant not in remaining:
+            remaining.append(variant)
     except:
         pass
 outfile = open(sys.argv[2], "w")
@@ -30,3 +28,4 @@ for line in my_parser.metadata.print_header():
     outfile.write(line + '\n')
 for variant in remaining:
     outfile.write('\t'.join([variant[head] for head in my_parser.header])+ "\n")
+
